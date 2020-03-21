@@ -11,11 +11,20 @@ A crowd-sourcing platform for the Covid-19 Pandemic
 
 1. Install Spatial Data Requirements
 
+#### For Ubuntu
+
 ```shell script
 sudo apt install libsqlite3-mod-spatialite python-gdal
 ```
+#### For Mac
 
-2. Setup virtual environment
+```shell script
+brew update
+brew install spatialite-tools
+brew install gdal
+```
+
+1. Setup virtual environment
 
 ```shell script
 python3 -m venv env
@@ -27,9 +36,7 @@ pip install -r requirements.txt
 
 ```shell script
 cp example.env .env
-# Edit the .env file according to your needs
-
-sudo apt-get install libsqlite3-mod-spatialite
+# Edit the .env file according to your needs. If you are new to decouple library read this https://pypi.org/project/python-decouple/
 ```
 
 4. Generate the local db
